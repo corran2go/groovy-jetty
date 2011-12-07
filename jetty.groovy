@@ -8,6 +8,7 @@ def runServer() {
   def context = new Context(server, "/", Context.SESSIONS);
   context.resourceBase = "."
   context.addServlet(TemplateServlet, "*.gsp")
+  context.addServlet(GroovyServlet, "*.groovy")
   server.start()
 }
 
